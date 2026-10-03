@@ -2,6 +2,26 @@
   publish = "."
 
 [[redirects]]
+  from = "/tt01"
+  to = "https://geni.us/pk-tt01-buy"
+  status = 301
+
+[[redirects]]
+  from = "/tt02"
+  to = "https://geni.us/pk-tt02-buy"
+  status = 301
+
+[[redirects]]
+  from = "/review/tt01"
+  to = "https://geni.us/pk-tt01-review"
+  status = 301
+
+[[redirects]]
+  from = "/review/tt02"
+  to = "https://geni.us/pk-tt02-review"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
