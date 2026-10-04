@@ -76,6 +76,18 @@
   force = true
 
 [[redirects]]
+  from = "/books/tt01/guides"
+  to = "/books/tt01/guides/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt01/guides/"
+  to = "/books/tt01/guides/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
