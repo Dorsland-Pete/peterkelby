@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join Peter Kelby's Puzzle Discovery Academy.">
+  <title>Join Puzzle Discovery Academy | Peter Kelby</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/pda/signup/signup.css">
+</head>
+<body>
+  <header class="masthead"><div class="shell"><a class="brand" href="/books/tt01">Peter <span>Kelby</span></a><span>Puzzles for curious minds</span></div></header>
+  <main>
+    <section class="hero"><div class="shell"><p class="eyebrow">Free to join</p><h1>Puzzle Discovery Academy</h1><p class="lead">Make time for a little discovery. Join Peter Kelby for puzzles, ideas and inspiration delivered to your inbox.</p></div></section>
+    <section class="content"><div class="shell signup-grid">
+      <div><h2>Your next puzzle starts here.</h2><p>Enter your first name and email address to join.</p><p>We’ll email you a confirmation link. Click it to confirm your address and complete your signup.</p><p id="book-reference" class="book-reference" hidden></p></div>
+      <div>
+        <form id="pda-signup" method="post" action="/.netlify/functions/pda-signup">
+          <label for="first-name">First name</label><input id="first-name" name="firstName" autocomplete="given-name" maxlength="100" required>
+          <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <input id="book" name="book" type="hidden">
+          <div class="honeypot" aria-hidden="true"><label for="website">Leave this blank</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <p class="signup-consent">By signing up, you agree to receive Puzzle Discovery Academy emails from Peter Kelby. You can unsubscribe at any time.</p>
+          <button class="button" type="submit" disabled>Join the Academy</button>
+          <p id="form-status" role="status">Signup is being prepared. Please check back shortly.</p>
+          <noscript><p>Please enable JavaScript to use this signup form.</p></noscript>
+        </form>
+        <div id="signup-success" class="card" tabindex="-1" hidden><p class="eyebrow">One more step</p><h2>Thank you!</h2><p class="lead">Look out for an email asking you to confirm your email address.</p><p>Click the link in that email to complete your signup. If you can’t see it, check your spam or junk folder.</p></div>
+      </div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="shell">Peter Kelby · Puzzle Discovery Academy</div></footer>
+  <script src="/pda/signup/signup.js"></script>
+</body>
+</html>
