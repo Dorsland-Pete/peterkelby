@@ -1,11 +1,11 @@
 'use strict';
 const BOOK_TAGS = require('../../config/pda-book-tags.json');
-const API_HOST = 'https://dorsland37461.api-us1.com';
+const apiHost = () => (process.env.ACTIVE_CAMPAIGN_API_URL || '').replace(/\/+$/, '');
 const FORM_URL = 'https://dorsland37461.activehosted.com/proc.php';
 const reply = (statusCode, data) => ({statusCode, headers: {'Content-Type':'application/json', 'Cache-Control':'no-store'}, body:JSON.stringify(data)});
-const ready = () => process.env.ACTIVE_CAMPAIGN_API_URL?.replace(/\/+$/, '') === API_HOST && Boolean(process.env.ACTIVE_CAMPAIGN_API_KEY);
+const ready = () => /^https:\/\/[a-z0-9-]+\.api-us[0-9]+\.com$/.test(apiHost()) && Boolean(process.env.ACTIVE_CAMPAIGN_API_KEY);
 async function api(path, options = {}) {
-  const response = await fetch(`${API_HOST}/api/3${path}`, {...options, headers:{'Api-Token':process.env.ACTIVE_CAMPAIGN_API_KEY, 'Content-Type':'application/json'}, signal:AbortSignal.timeout(8000)});
+  const response = await fetch(`${apiHost()}/api/3${path}`, {...options, headers:{'Api-Token':process.env.ACTIVE_CAMPAIGN_API_KEY, 'Content-Type':'application/json'}, signal:AbortSignal.timeout(8000)});
   if (!response.ok) throw new Error('ActiveCampaign unavailable');
   return response.json();
 }
