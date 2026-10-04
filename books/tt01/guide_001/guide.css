@@ -8,6 +8,8 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .guide{width:100%;flex:1}
 .step+.step{margin-top:48px}
 .enhanced .step{margin-top:0}
+.enhanced .instructions>h2{display:none}
+.puzzle-title:focus{outline:none}
 .step h2:focus{outline:none}
 .step-navigation[hidden]{display:none}
 .next:disabled{color:#8c9294;background:transparent;border-color:#d2d3cd;cursor:default}
@@ -18,7 +20,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:Source Sans,A
 .title-plaque{display:block;width:min(442px,85vw);height:auto;margin:0 auto 23px}
 h1,h2,h3{font-family:Barlow Condensed,Arial,sans-serif;font-weight:600;line-height:1.15}
 h1{font-size:36px;color:var(--navy);margin:0 0 5px}
-.puzzle-title{font-family:Barlow Condensed,Arial,sans-serif;color:var(--red);font-size:27px;margin:0}
+.puzzle-title{font-family:Barlow Condensed,Arial,sans-serif;color:var(--red);font-size:36px;margin:0}
 .guide{max-width:1040px;margin:36px auto 0;padding:0 28px}
 .step{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
 .instructions{grid-column:2;grid-row:1}
@@ -48,7 +50,7 @@ footer a{color:var(--cream);text-underline-offset:4px}
   .guide-header{padding-top:22px}
   .title-plaque{width:min(442px,calc(100vw - 32px));max-width:none;margin-left:50%;transform:translateX(-50%);margin-bottom:19px}
   h1{font-size:32px}
-  .puzzle-title{font-size:26px}
+  .puzzle-title{font-size:32px}
   .guide{padding:0 22px;margin-top:29px;max-width:520px}
   .step{display:flex;flex-direction:column;align-items:stretch;gap:16px}
   h2{font-size:27px;margin-bottom:16px}

@@ -4,6 +4,7 @@
   const back = navigation.querySelector('.back');
   const next = navigation.querySelector('.next');
   const count = navigation.querySelector('.page-count');
+  const heading = document.querySelector('.puzzle-title');
   let current = 0;
 
   function showPage(moveFocus = false) {
@@ -12,11 +13,13 @@
     sections.forEach((section, index) => { section.hidden = index !== current; });
     back.disabled = current === 0;
     next.disabled = current === sections.length - 1;
-    count.textContent = current === 0 ? 'Introduction' :
+    heading.textContent = 'PUZZLE 001: ' + (current === 0 ? 'THE START' :
+      current === sections.length - 1 ? 'COMPLETED' : 'STEP ' + current);
+    count.textContent = current === 0 ? 'The Start' :
       current === sections.length - 1 ? 'Completed' : 'Step ' + current + ' of 8';
     document.title = 'Puzzle 001 · ' + count.textContent + ' | Classic Train Tracks';
     if (moveFocus) {
-      sections[current].querySelector('h2').focus({ preventScroll: true });
+      heading.focus({ preventScroll: true });
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
   }
