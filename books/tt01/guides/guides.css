@@ -2,7 +2,8 @@
 .intro{margin:15px auto 0;max-width:520px}
 .guide-header h1{font-size:calc(36px + 8pt)}
 body{color:var(--navy)}
-footer{background:var(--cream);color:var(--navy);border-top:1px solid var(--rule)}
+footer{background:var(--navy);color:var(--cream);border-top:0}
+footer a,footer a:visited{color:var(--cream)}
 .directory{width:100%;max-width:1040px;margin:32px auto 0;padding:0 28px;flex:1}
 .puzzle-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 48px}
 .puzzle-card{padding:0;margin:0;text-align:center;min-width:0}
