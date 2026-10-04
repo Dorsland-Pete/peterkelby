@@ -88,6 +88,30 @@
   force = true
 
 [[redirects]]
+  from = "/tt01/guides"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tt01/guides/"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tt02/guides"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tt02/guides/"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
