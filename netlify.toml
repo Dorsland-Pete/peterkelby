@@ -136,6 +136,78 @@
   force = true
 
 [[redirects]]
+  from = "/books/tt02/guide_001"
+  to = "/books/tt02/guide_001/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_001/"
+  to = "/books/tt02/guide_001/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_002"
+  to = "/books/tt02/guide_002/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_002/"
+  to = "/books/tt02/guide_002/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_051"
+  to = "/books/tt02/guide_051/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_051/"
+  to = "/books/tt02/guide_051/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_052"
+  to = "/books/tt02/guide_052/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_052/"
+  to = "/books/tt02/guide_052/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_176"
+  to = "/books/tt02/guide_176/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_176/"
+  to = "/books/tt02/guide_176/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_177"
+  to = "/books/tt02/guide_177/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/books/tt02/guide_177/"
+  to = "/books/tt02/guide_177/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
