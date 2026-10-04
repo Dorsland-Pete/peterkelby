@@ -13,11 +13,11 @@
     sections.forEach((section, index) => { section.hidden = index !== current; });
     back.disabled = current === 0;
     next.disabled = current === sections.length - 1;
-    heading.textContent = 'PUZZLE 002: ' + (current === 0 ? 'THE START' :
+    heading.textContent = 'PUZZLE #002: ' + (current === 0 ? 'THE START' :
       current === sections.length - 1 ? 'COMPLETED' : 'STEP ' + current);
     count.textContent = current === 0 ? 'The Start' :
       current === sections.length - 1 ? 'Completed' : 'Step ' + current + ' of 11';
-    document.title = 'Puzzle 002 · ' + count.textContent + ' | Classic Train Tracks';
+    document.title = 'Puzzle #002 · ' + count.textContent + ' | Classic Train Tracks';
     if (moveFocus) {
       heading.focus({ preventScroll: true });
       window.scrollTo({ top: 0, behavior: 'instant' });
