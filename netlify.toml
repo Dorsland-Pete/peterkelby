@@ -5,6 +5,7 @@
   from = "/"
   to = "https://geni.us/pk-author-page"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/tt01"
