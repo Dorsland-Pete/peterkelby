@@ -62,3 +62,5 @@ footer a{color:var(--cream);text-underline-offset:4px}
   footer{margin-top:28px;padding:20px;font-size:14px}
 }
 @media(prefers-reduced-motion:no-preference){button{transition:background-color .15s,border-color .15s}}
+
+.book-title-link,.book-title-link:visited,.book-title-link:hover,.book-title-link:active{color:inherit;text-decoration:none;font-weight:700;font-style:italic}
