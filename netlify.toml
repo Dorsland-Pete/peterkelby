@@ -112,6 +112,18 @@
   force = true
 
 [[redirects]]
+  from = "/logicacademy/signup"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/logicacademy/signup/"
+  to = "/errors/guide-not-found.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
