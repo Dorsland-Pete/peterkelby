@@ -9,8 +9,15 @@
 
 [[redirects]]
   from = "/tt01/guide_*"
-  to = "/books/tt01/guide_:splat"
-  status = 301
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tt02/guide_*"
+  to = "/404.html"
+  status = 404
+  force = true
 
 [[redirects]]
   from = "/tt02/guide_*"
