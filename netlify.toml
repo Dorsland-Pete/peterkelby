@@ -28,6 +28,16 @@
   status = 301
 
 [[redirects]]
+  from = "/tt01/*"
+  to = "/books/tt01/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/tt02/*"
+  to = "/books/tt02/:splat"
+  status = 301
+
+[[redirects]]
   from = "/tt01"
   to = "https://geni.us/pk-tt01-buy"
   status = 301
