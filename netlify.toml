@@ -8,6 +8,16 @@
   force = true
 
 [[redirects]]
+  from = "/tt01/guides"
+  to = "/books/tt01/guides"
+  status = 301
+
+[[redirects]]
+  from = "/tt02/guides"
+  to = "/books/tt02/guides"
+  status = 301
+
+[[redirects]]
   from = "/tt01"
   to = "https://geni.us/pk-tt01-buy"
   status = 301
