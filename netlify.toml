@@ -8,6 +8,16 @@
   force = true
 
 [[redirects]]
+  from = "/tt01/guide_*"
+  to = "/books/tt01/guide_:splat"
+  status = 301
+
+[[redirects]]
+  from = "/tt02/guide_*"
+  to = "/books/tt02/guide_:splat"
+  status = 301
+
+[[redirects]]
   from = "/tt01/guides"
   to = "/books/tt01/guides"
   status = 301
