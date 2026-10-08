@@ -12,6 +12,25 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
 
+# Social profile links: temporary redirects allow future destination changes.
+[[redirects]]
+  from = "/tiktok"
+  to = "https://www.tiktok.com/@peterkelbybooks"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/pinterest"
+  to = "https://www.pinterest.com/peterkelbybooks"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/instagram"
+  to = "https://www.instagram.com/peterkelbybooks/"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/"
   to = "https://geni.us/pk-author-page"
