@@ -4,6 +4,12 @@ const apiHost = () => (process.env.ACTIVE_CAMPAIGN_API_URL || '').replace(/\/+$/
 const FORM_URL = 'https://dorsland37461.activehosted.com/proc.php';
 const reply = (statusCode, data) => ({statusCode, headers: {'Content-Type':'application/json', 'Cache-Control':'no-store'}, body:JSON.stringify(data)});
 const ready = () => /^https:\/\/[a-z0-9-]+\.api-us[0-9]+\.com$/.test(apiHost()) && Boolean(process.env.ACTIVE_CAMPAIGN_API_KEY);
+// Keep abuse from reaching ActiveCampaign. The Netlify edge applies this per
+// visitor IP before this function executes; credentials never reach the browser.
+exports.config = {
+  path: '/.netlify/functions/pda-signup',
+  rateLimit: {windowLimit: 10, windowSize: 60, aggregateBy: ['ip', 'domain']}
+};
 async function api(path, options = {}) {
   const response = await fetch(`${apiHost()}/api/3${path}`, {...options, headers:{'Api-Token':process.env.ACTIVE_CAMPAIGN_API_KEY, 'Content-Type':'application/json'}, signal:AbortSignal.timeout(8000)});
   if (!response.ok) throw new Error('ActiveCampaign unavailable');
