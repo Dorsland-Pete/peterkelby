@@ -2,9 +2,11 @@
 const query = new URLSearchParams(location.search);
 const book = (query.get('book') || '').trim();
 // Labels are optional. The server maps approved books using config/pda-book-tags.json.
-const books = {tt01: 'Classic Train Tracks', tt02: 'Closed-Loop Train-Tracks'};
-document.querySelector('#book').value = book;
-if (Object.hasOwn(books, book)) {
+const books = {tt01: 'The Classic Train Tracks Logic Puzzle Book', tt02: 'Closed-Loop Train-Tracks'};
+const bookField = document.querySelector('#book');
+// QR links supply a hidden book code; the /pda page asks readers to choose.
+if (bookField.type === 'hidden') bookField.value = book;
+if (bookField.type === 'hidden' && Object.hasOwn(books, book)) {
   const reference = document.querySelector('#book-reference');
   reference.textContent = `Joining us from ${books[book]}? Welcome!`;
   reference.hidden = false;
